@@ -361,7 +361,7 @@ a {
     margin: auto;
 }
 
-.laptop {
+.fflex {
     display: none;
 }
 
@@ -1160,13 +1160,55 @@ footer p {
         grid-row-end: 4;
     }
     
-    .laptop {
+    .fflex {
         display: flex;
         flex-direction: row;
         width: 100%;
         flex-wrap: wrap;
     }
     
+    .fflex1 {
+        width: 40%;
+        margin: 5%;
+        position: relative;
+    }
+    
+    .fflex2 {
+        width: 40%;
+        margin: 5%;
+        position: relative;
+    }
+    
+    .fflex3 {
+        width: 40%;
+       margin: 5%;
+        position: relative;
+    }
+    
+    .fflex4 {
+        width: 40%;
+        margin: 5%;
+        position: relative;
+    }
+    
+    
+    .fflex img {
+        width: 100%;
+    }
+    
+    .fflextekst {
+    background-color: #EADFCF;
+    color: dimgrey;
+    font-size: 20px;
+    padding: 20px 40px;
+    white-space: nowrap;
+    font-weight: 500;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    width: 50%;
+    text-align: center;
+    }
 
     /*    Nav bar   */
     #nav {
@@ -1606,22 +1648,30 @@ footer p {
         letter-spacing: 4px;
     }
     
-    .laptop {
+    .fflex {
         display: flex;
         flex-direction: row;
         width: 100%;
         flex-wrap: wrap;
     }
     
-    .laptop img {
+    .fflex1, .fflex2, .fflex3, .fflex4 {
         width: 80%;
-        margin-left: 7%;
+        margin: auto;
+        margin-top: 25px;
     }
     
-    #mindreboks {
-     width: 40%;
-        padding: 10px;
-        margin-left: 30%;
+    .fflex img {
+        width: 100%;
+        margin: auto;
+    }
+    
+    .fflextekst {
+     font-size: 16px;
+        width: 30%;
+        padding: 20px 30px 20px 30px;
+        top: 42%;
+        left: 35%;
     }
 
     /* Kontakt    */
