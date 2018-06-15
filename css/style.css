@@ -361,6 +361,10 @@ a {
     margin: auto;
 }
 
+.laptop {
+    display: none;
+}
+
 #scroll {
     display: block;
     margin: auto;
@@ -1145,24 +1149,15 @@ footer p {
 
     /*  Forside  */
     .grid1 {
-        grid-column-start: 1;
-        grid-column-end: 10;
-        grid-row-start: 5;
-        grid-row-end: 9;
+        display: none;
     }
 
     .grid2 {
-        grid-column-start: 1;
-        grid-column-end: 10;
-        grid-row-start: 9;
-        grid-row-end: 13;
+        display: none;
     }
 
     .grid3 {
-        grid-column-start: 11;
-        grid-column-end: 13;
-        grid-row-start: 5;
-        grid-row-end: 12;
+        display: none;
     }
 
     .grid4 {
@@ -1171,6 +1166,14 @@ footer p {
         grid-row-start: 1;
         grid-row-end: 4;
     }
+    
+    .laptop {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
 
     /*    Nav bar   */
     #nav {
@@ -1357,8 +1360,8 @@ footer p {
     }
     
     .galtekst {
-        width: 50% !important;
-        margin-left: 25% !important;
+        width: 70%;
+        margin-left: 15%;
     }
 
     .h2gal {
@@ -1404,6 +1407,8 @@ footer p {
     .vaerkertekst {
         font-size: 15px;
         padding: 5px;
+        width: 80%;
+        margin: 10%;
     }
 
     .vaerkerflex {
@@ -1413,10 +1418,15 @@ footer p {
     .onethird {
         width: 29%;
     }
+    
+    #linje {
+        margin: 0%;
+        width: 25%;
+    }
 
     /*    Værker   */
     .vaerker1 {
-        width: 60%;
+        width: 90%;
         display: flex;
         flex-wrap: wrap;
         margin: auto;
@@ -1592,7 +1602,7 @@ footer p {
 
 /* For Mobile */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
 
     html p {
         font-size: 12px;
@@ -1601,6 +1611,24 @@ footer p {
     .overskrift {
         font-size: 40px;
         letter-spacing: 4px;
+    }
+    
+    .laptop {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .laptop img {
+        width: 80%;
+        margin: auto;
+    }
+    
+    #mindreboks {
+     width: 40%;
+        padding: 10px;
+        margin-left: 30%;
     }
 
     /* Kontakt    */
@@ -1712,24 +1740,15 @@ footer p {
 
     /*    forside*/
     .grid1 {
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 5;
-        grid-row-end: 7;
+        display: none;
     }
 
     .grid2 {
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 8;
-        grid-row-end: 10;
+        display: none;
     }
 
     .grid3 {
-        grid-column-start: 4;
-        grid-column-end: 13;
-        grid-row-start: 5;
-        grid-row-end: 10;
+        display: none;
     }
 
     .grid4 {
@@ -1770,8 +1789,7 @@ footer p {
     
     .galtekst {
         width: 70%;
-        margin-left: 10%;
-        margin-right: 0px;
+        margin-left: 15%;
     }
     /*    Værker, Værksted og process, Billedearkiv   */
     .vaerker {
@@ -1951,6 +1969,8 @@ footer p {
         opacity: 1;
         cursor: pointer;
     }
+    
+    
 
     .h2gal {
         font-size: 25px;
@@ -2021,6 +2041,9 @@ footer p {
     
     #somefooter {
         align-items: center;
+    }
+    #infooverskrift {
+        margin: 10px;
     }
 
 }
