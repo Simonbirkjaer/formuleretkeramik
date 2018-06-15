@@ -1148,17 +1148,10 @@ footer p {
 @media only screen and (max-width: 1223px) {
 
     /*  Forside  */
-    .grid1 {
+    .grid1, .grid2, .grid3 {
         display: none;
     }
 
-    .grid2 {
-        display: none;
-    }
-
-    .grid3 {
-        display: none;
-    }
 
     .grid4 {
         grid-column-start: 1;
@@ -1622,7 +1615,7 @@ footer p {
     
     .laptop img {
         width: 80%;
-        margin: auto;
+        margin-left: 7%;
     }
     
     #mindreboks {
@@ -1739,15 +1732,7 @@ footer p {
 
 
     /*    forside*/
-    .grid1 {
-        display: none;
-    }
-
-    .grid2 {
-        display: none;
-    }
-
-    .grid3 {
+    .grid1, .grid2, .grid3 {
         display: none;
     }
 
