@@ -1,0 +1,2026 @@
+/* GENERELLE TING START */
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Rhesmanisa";
+    src: url(../fonts/Rhesmanisa.ttf);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    background-color: #F1F1F1;
+    margin: 0px;
+}
+
+body p {
+    font-size: 14px;
+}
+
+#logo {
+    margin: 10px;
+    margin-top: 0px;
+    width: 90%;
+}
+
+.button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24), 0 8px 10px 0 rgba(0, 0, 0, 0.19);
+    font-weight: 500;
+    margin-right: 10px;
+    transition: all 0.1s ease-in;
+    margin-top: 50px;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+#sendbutton {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 6px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 20px;
+    font-weight: 500;
+    margin-right: 10px;
+    transition: all 0.1s ease-in;
+}
+
+#sendbutton:hover {
+
+    transform: scale(1.05);
+}
+
+hr {
+    border: 0;
+    height: 1.5px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.overskrift {
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Rhesmanisa';
+    letter-spacing: 6px;
+}
+
+/*artikeltekst START*/
+
+.artikeltekst {
+    margin-left: 22%;
+    line-height: 2;
+    width: 50%;
+}
+
+.artikeltekst a {
+    color: black;
+    text-decoration: none;
+}
+
+.artikeltekst a:hover {
+    color: darkgrey;
+}
+
+/*artikeltekst SLUT*/
+
+/* GENERELLE TING SLUT */
+
+/* Header START*/
+
+.flexbox {
+    display: flex;
+    width: 97%;
+}
+
+.flexitem1 {
+    flex: 10;
+}
+
+.flexitem1 img {
+    display: block;
+    margin: auto;
+    width: 90%;
+    min-width: 200px;
+}
+
+.flexitem2 {
+    flex: 35;
+    display: block;
+    margin: auto;
+}
+
+#headericon {
+    height: 40px;
+    width: 40px;
+}
+
+.artikelimg {
+    display: block;
+    margin: auto;
+    padding: 15px;
+    width: 80%;
+}
+
+
+/* Menu bar START */
+
+a {
+    text-decoration: none;
+}
+
+#nav > a {
+    display: none;
+}
+
+#nav li {
+    position: relative;
+
+}
+
+#nav {
+    z-index: 4;
+}
+
+
+#nav li a {
+    color: black;
+    display: block;
+}
+
+
+#nav span:after {
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-bottom: none;
+    border-top-color: dimgray;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    right: 5px;
+}
+
+/* first level */
+
+/*backgrund på lvl 1*/
+
+#nav > ul {
+    height: 60px;
+    background-color: #F1F1F1;
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+   
+}
+
+/*box om lvl 1 */
+
+#nav > ul > li {
+    width: 8%;
+    height: 100%;
+    float: left;
+    z-index: 4;
+    
+   
+}
+
+#nav > ul > li > a {
+    height: 100%;
+    font-size: 16px;
+    line-height: 60px;
+    text-align: center;
+
+}
+
+/*lvl 1 streger i mellem*/
+
+#nav > ul > li:not( :last-child) > a {}
+
+/*lvl 2 ved hover*/
+
+#nav > ul > li:hover > a,
+#nav > ul:not( :hover) > li.active > a {
+    background-color: #EADFCF;
+}
+
+
+
+
+#nav li ul {
+    background-color: #F1F1F1;
+    display: none;
+    position: absolute;
+    top: 100%;
+    padding: 0;
+}
+
+/*box om lvl 3*/
+
+#nav li:hover ul {
+    display: block;
+    left: 0;
+    right: 0;
+    list-style: none;
+    text-decoration: none;
+    width: 300px;
+    border: thin solid #B4B4B4;
+
+
+}
+
+#nav li:not( :first-child):hover ul {
+    left: -1px;
+}
+
+
+/*streger mellem lvl 3*/
+
+#nav li ul a {
+    font-size: 18px;
+    border-top: 1px solid black;
+    padding: 15px;
+    width: 300px;
+}
+
+/*hover farve på lvl 3*/
+
+#nav li ul li a:hover,
+#nav li ul:not( :hover) li.active a {
+    background-color: #EADFCF;
+    width: 300px;
+}
+
+#menuhul {
+    padding-left: 40%;
+}
+
+#tilmeldmenu {
+    width: 200%;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+}
+
+#tilmeldmenu p {
+  margin-top: 0px;
+    font-size: 16px;
+    white-space: nowrap;
+    margin-bottom: 0px;
+    
+}
+
+#fixed {
+    width: 10% !important;
+}
+
+/* Menu bar SLUT */
+
+/* Header SLUT */
+
+/*Forside start*/
+
+.container {
+    display: grid;
+    width: 95%;
+    margin: auto;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 30px;
+
+}
+
+.grid1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.grid1 img {
+    width: 100%;
+    height: 96%;
+}
+
+.grid2 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+}
+
+.grid2 img {
+    width: 100%;
+    height: 96%;
+}
+
+.grid3 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.grid3 img {
+    width: 100%;
+    height: 98%;
+}
+
+.grid4 {
+    height: auto;
+    display: block;
+    margin: auto;
+    grid-column-start: 3;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    align-self: start;
+    margin: 0px;
+
+}
+
+.grid4 video {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+#scroll {
+    display: block;
+    margin: auto;
+    height: 80px;
+    width: auto;
+}
+
+.gavekort {
+    width: 90%;
+    margin: auto;
+    display: block;
+    margin-top: 0px;
+}
+
+#forsideoverskrift {
+    margin-bottom: 0px;
+}
+
+/*Forside slut*/
+
+/*Gavekort start*/
+
+#gktekst {
+    font-style: italic;
+    font-size: 12px;
+}
+
+.gktekst {
+    width: 39%;
+    margin: auto;
+    text-align: center;
+    text-align: justify;
+}
+
+.gktekst a {
+    text-decoration: none;
+    color: black;
+}
+
+.gktekst a:hover {
+    color: dimgrey;
+}
+
+#h2gk {
+    margin-bottom: 0px;
+    margin-top: 30px;
+}
+
+
+.kobgk {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#gkbutton {
+    margin-top: 20px;
+}
+
+/*Gavekort slut*/
+
+/*CV start*/
+
+#CV {
+    margin-left: 10%;
+}
+
+/*CV slut*/
+
+/* Galleri start */
+
+.galleriflex {
+    display: flex;
+    width: 90%;
+    /*  margin: 1.7% 5% 1.7% 5%;*/
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: auto;
+    /*    border: green solid thin;*/
+    margin-top: 30px;
+}
+
+.galleriflex img {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: auto;
+    transition: all 0.1s ease-in;
+}
+
+.galleriflex img:hover {
+    transform: scale(1.07);
+}
+
+.galleri1,
+.galleri2,
+.galleri3,
+.galleri4 {
+    flex: 25%;
+    /*    border: black solid thin;*/
+    display: block;
+}
+
+.galleri1 {
+    margin: 10px;
+}
+
+.galleri2 {
+    margin: 10px;
+}
+
+.galleri3 {
+    margin: 10px;
+}
+
+.galleri4 {
+    margin: 10px;
+}
+
+div.scrollgal {
+    white-space: nowrap;
+    width: 90%;
+    margin-left: 10%;
+    height: auto;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+div.scrollgal a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    margin: 0px;
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    height: 200px;
+    width: 200px;
+}
+
+div.scrollgal a:hover {
+    color: dimgrey;
+}
+
+div.scrollgal img {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+}
+
+.galhover {
+    position: relative;
+}
+
+.galhover:hover .galimage {
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.galhover:hover .middle {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.galtekst {
+    background-color: #EADFCF;
+    color: dimgrey;
+    font-size: 16px;
+    padding: 10px 20px;
+    white-space: nowrap;
+    font-weight: 500;
+
+}
+
+.h2gal {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Sådan laves en vase START */
+
+#lave {
+    width: 85%;
+    border: thin black solid;
+    display: block;
+    margin: auto;
+    font-size: 16px;
+}
+
+
+/* Sådan laves en vase slut */
+
+/* Galleri billeder START */
+
+.accordion {
+    background-color: #F1F1F1;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    display: block;
+    margin: auto;
+    margin: none;
+}
+
+.active,
+.accordion:hover {
+    transform: scale(1.05);
+}
+
+button.accordion {
+    margin: 0px;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    width: 100%;
+    margin: auto;
+}
+
+#infooverskrift {
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Rhesmanisa';
+    letter-spacing: 6px;
+    margin-bottom: 4px;
+}
+
+#info {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+.accordion img {
+    display: block;
+    margin: auto;
+    height: auto;
+    width: 100%;
+}
+
+
+#produktbox {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+
+
+}
+
+
+#produktitem1 {
+    flex: 1;
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    padding: 10px;
+    margin: 0px;
+}
+
+
+/*Galleri billeder SLUT*/
+
+/*Værker start*/
+
+.vaerker {
+    width: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: auto;
+}
+
+.vaerkerflex {
+    flex: 25%;
+    width: 90%;
+    position: relative;
+    margin: 30px;
+}
+
+.vaerkerimage {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    width: auto;
+}
+
+.vaerkerflex:hover .vaerkerimage {
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.vaerkerflex:hover .middle {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.vaerkertekst {
+    background-color: #EADFCF;
+    color: dimgrey;
+    font-size: 20px;
+    padding: 20px 40px;
+    white-space: nowrap;
+    font-weight: 500;
+
+}
+
+/*Værker slut*/
+
+/*Priser start*/
+
+.priser {
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.priser2 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+/*Priser slut*/
+
+/*Billedarkiv start*/
+
+#bvtekst {
+    text-align: center;
+}
+
+.materialer {
+    float: right;
+    margin: 15px;
+    margin-right: 15%;
+    margin-bottom: 0px;
+}
+
+#materialer2 {
+    margin-top: 10px;
+}
+
+/*Billedarkiv slut*/
+
+#bordtilto {
+    display: block;
+    margin: auto;
+}
+
+/* Galleri slut */
+
+/* NYT-SIDE START */
+
+/* Nyhedsbox START */
+
+#nyhedsbrevbox {
+    height: auto;
+    width: 90%;
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+#nyhedspic {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    padding: 20px;
+}
+
+
+#nyhedstextbox {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 25%;
+    height: 15%;
+    left: 37.5%;
+    top: 40px;
+    z-index: 3;
+    line-height: 45px;
+    height: 150px;
+    margin: auto;
+}
+
+#nyhedstextbox h3 {
+    font-family: 'Open Sans';
+    font-weight: 200;
+    font-size: 26px;
+    
+}
+
+#nyhedstext {
+    text-align: center;
+    margin: auto;
+    color: black;
+    margin-top: 15%;
+}
+
+
+/* Nyhedsbox SLUT */
+
+/* NYESTE START */
+
+#nyestebox {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    position: static;
+
+}
+
+
+.nyestearticle {
+    flex: 1;
+    width: 20%;
+    padding: 20px;
+}
+
+.nyesteimg {
+    width: 100%;
+    height: 200px;
+}
+
+
+.nyestearticle a {
+    color: black;
+}
+
+
+/* NYESTE SLUT */
+
+/*TILMELD NYHEDSBREV START*/
+
+#tilmeldbox {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+
+#tilmelditem1 {
+    flex: 2;
+    display: block;
+    padding: 30px;
+}
+
+
+
+#tilmelditem2 {
+    flex: 1;
+    margin: auto;
+    width: 25%;
+
+}
+
+#tilmelditem2 img {
+    width: 100%;
+}
+
+#knapnyhed {
+    margin-top: 50px;
+}
+
+#emailbox {
+    padding: 8px 20px;
+    margin: 10px;
+    margin-left: 0px;
+    font-size: 14px;
+}
+
+
+
+/*TILMELD NYHEDSBREV SLUT*/
+
+/*Årlige nyhedsbrev start*/
+
+.h2nyheder {
+    margin-left: 10%;
+    margin-top: 50px;
+}
+
+div.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+    width: 90%;
+    margin-left: 10%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+div.scrollmenu a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px;
+    margin: 0px;
+    margin-right: 20px;
+    text-decoration: none;
+    background-color: #EADFCF;
+    font-size: 16px;
+}
+
+div.scrollmenu a:hover {
+    color: dimgrey;
+}
+
+div.scrollmenu img {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+}
+
+
+/*Årlig nyhedsbrev slut*/
+
+/*Galleri Pagter start*/
+
+.italic {
+    font-style: italic;
+}
+
+.pagter {
+    display: flex;
+    justify-content: center;
+
+}
+
+.pagter img {
+    margin: 2px;
+}
+
+#pagterimg {
+    display: block;
+    margin: auto;
+}
+
+/*Galleri Pagter slut*/
+
+/* NYT-SIDE SLUT */
+
+/*Om mig start*/
+
+#ommig {
+    margin-left: 10%;
+}
+
+.omtekst {
+    width: 50%;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.omimg {
+    height: 450px;
+    width: auto;
+    float: right;
+    margin-right: 14%;
+}
+
+
+/*Om mig slut*/
+
+/*Kontakt side start*/
+
+.kontaktflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    text-align: center;
+    margin: 5%;
+    flex-direction: row;
+}
+
+.kontaktinfo,
+.aabningstider,
+.mapsflex {
+    flex: 1;
+    width: 400px;
+}
+
+.mapsflex {
+    z-index: 5;
+}
+
+
+.aabningstider p {
+    line-height: 2.3;
+    font-weight: 300;
+    text-align: center;
+}
+
+.aabningstider h1 {
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.kontaktinfo p {
+    font-weight: 300;
+    text-align: left;
+    margin: 0px;
+}
+
+.kontaktinfo h2 {
+    font-weight: 400;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+.kontaktinfo h1 {
+    text-align: left;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.kontaktinfo a {
+    text-decoration: none;
+    color: black;
+}
+
+.kontaktinfo a:hover {
+    color: darkgrey;
+}
+
+/*Kontakt side slut*/
+
+/*footer start*/
+
+footer {
+    background-color: #EADFCF;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 40px;
+
+}
+
+#footerlogo {
+    display: block;
+    margin: auto;
+    width: 30%;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+/*flexbox*/
+
+.footerflex {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 30px;
+    text-align: center;
+}
+
+#aabningstiderfooter,
+#kontaktfooter,
+#linksfooter {
+    flex: 1;
+}
+
+
+
+/*åbningstider start*/
+
+#aabningstiderfooter h1 {
+    font-size: 18px;
+    margin-top: 0px;
+}
+
+#aabningstiderfooter {
+    line-height: 2.3;
+}
+
+/*åbningstider slut*/
+
+/*kontakt start*/
+
+#kontaktfooter img {
+    display: block;
+    margin: auto;
+    width: 30px;
+}
+
+#kontaktfooter h1 {
+    font-size: 18px;
+}
+
+#kontaktfooter p {
+    margin-top: 0px;
+    margin-bottom: 42px;
+}
+
+#kontaktfooter a {
+    text-decoration: none;
+    color: black;
+}
+
+#kontaktfooter a:hover {
+    color: darkgrey;
+}
+
+/*kontakt slut*/
+
+/*links start*/
+
+#somefooter img {
+    padding: 10px;
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+#linksfooter h1 {
+    margin: 0px;
+    font-size: 18px;
+}
+
+#linksfooter p {
+    margin: 0px;
+    margin-bottom: 30px;
+}
+
+#adressefooter {
+    margin-bottom: 0px !important;
+}
+
+/*links slut*/
+
+#copyright {
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+/*footer slut*/
+
+/*Google maps start*/
+
+#map {
+    width: 300px;
+    height: 400px;
+    float: right;
+    z-index: -1;
+}
+
+/*Google maps slut*/
+
+/* For Tablet */
+
+@media only screen and (max-width: 1223px) {
+
+    /*  Forside  */
+    .grid1 {
+        grid-column-start: 1;
+        grid-column-end: 10;
+        grid-row-start: 5;
+        grid-row-end: 9;
+    }
+
+    .grid2 {
+        grid-column-start: 1;
+        grid-column-end: 10;
+        grid-row-start: 9;
+        grid-row-end: 13;
+    }
+
+    .grid3 {
+        grid-column-start: 11;
+        grid-column-end: 13;
+        grid-row-start: 5;
+        grid-row-end: 12;
+    }
+
+    .grid4 {
+        grid-column-start: 1;
+        grid-column-end: 13;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+
+    /*    Nav bar   */
+    #nav {
+        width: 100%;
+        position: static;
+    }
+
+    html {
+        font-size: 75%;
+    }
+
+    #nav {
+        position: relative;
+
+    }
+    #nav > a {
+        width: 50px;
+        height: 50px;
+        text-align: left;
+        text-indent: -9999px;
+        background-color: #f1f1f14;
+        position: relative;
+
+    }
+    #nav > a:before,
+    #nav > a:after {
+        position: absolute;
+        border: 2px solid black;
+        top: 35%;
+        left: 25%;
+        right: 25%;
+        content: '';
+    }
+    #nav > a:after {
+        top: 60%;
+    }
+
+    #nav:not( :target) > a:first-of-type,
+    #nav:target > a:last-of-type {
+        display: block;
+        float: right;
+    }
+
+
+    /* first level */
+    #nav > ul {
+        height: auto;
+        display: none;
+        position: absolute;
+        right: 0;
+        padding: 0;
+        top: 37px;
+        width: 275px;
+        background-color: #eadfcf;
+        border-top: none;
+        border-bottom: none;
+
+    }
+    
+    #nav:target > ul {
+        display: block;
+    }
+    
+    #nav > ul > li {
+        width: 100% !important;
+        float: none;
+        border-top: 1px solid #f1f1f1;
+
+    }
+    #nav > ul > li > a {
+        height: auto;
+        text-align: left;
+        padding: 0 5px;
+    }
+    #nav > ul > li:not( :last-child) > a {
+        width: 275px;
+    }
+
+    #nav ul: hover {
+        width: 100%;
+    }
+    
+    #nav > ul > li:hover > a,
+#nav > ul:not( :hover) > li.active > a {
+    background-color: #d8c8ad;
+}
+
+    /* second level */
+    #nav li ul {
+        position: static;
+        padding: 0px;
+        padding-top: 0;
+        font-size: 14px;
+        font-style: italic;
+        width: 100%;
+        background-color: #d8c8ad;
+    }
+
+    #nav li ul a {
+        font-size: 14px;
+        padding: 10px;
+        border: none;
+        width: 275px;
+    }
+
+    #nav ul li {
+        width: 60%;
+    }
+
+    #tilmeldmenu {
+        width: 275px;
+    }
+    
+    #nav li:hover ul {
+        width: 275px;
+        border: none;
+    }
+
+    #nav li ul li a:hover {
+        width: 275px;
+
+    }
+
+    #nav li ul li a {
+
+        padding-left: 5px;
+
+    }
+
+    #nav li ul a: hover {
+        width: 275px;
+    }
+    
+    #nav li ul li a:hover,
+#nav li ul:not( :hover) li.active a {
+    background-color: #eadfcf;
+}
+    
+    #tilmeldmenu p {
+        font-size: 14px;
+    }
+
+
+    div.scrollmenu,
+    .h2nyheder {
+        margin-left: 5%;
+    }
+
+    /*    Gavekort   */
+    .gavekort {
+        width: 100%;
+    }
+
+    /*    Galleri   */
+    div.scrollgal img {
+        width: 100%;
+    }
+
+    div.scrollgal {
+
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        align-content: center;
+        white-space: normal;
+        flex-wrap: wrap;
+    }
+
+    div.scrollgal a {
+        width: 40%;
+        height: auto;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .galimage {
+        opacity: 3;
+        cursor: pointer;
+    }
+
+    .middle {
+        opacity: 1;
+        cursor: pointer;
+    }
+    
+    .galtekst {
+        width: 50% !important;
+        margin-left: 25% !important;
+    }
+
+    .h2gal {
+        font-size: 25px;
+    }
+
+    .removebr {
+        display: none;
+    }
+
+    /*    Priser   */
+    .poof {
+        margin-right: 5%;
+        margin-top: 15%;
+    }
+
+    .artikeltekst {
+        margin: auto;
+        width: 90%;
+        flex-direction: row;
+    }
+
+    /*    billede arkiv    */
+    .vaerker {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        flex-direction: row;
+        align-content: center;
+    }
+
+    .vaerkerflex .vaerkerimage {
+        opacity: 0.;
+        cursor: pointer;
+    }
+
+    .vaerkerflex .middle {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .vaerkertekst {
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    .vaerkerflex {
+        width: 33%;
+    }
+
+    .onethird {
+        width: 29%;
+    }
+
+    /*    Værker   */
+    .vaerker1 {
+        width: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        flex-direction: row;
+        align-content: center;
+    }
+
+    .vaerkerflex1 .vaerkerimage1 {
+        opacity: 0.;
+        cursor: pointer;
+    }
+
+    .vaerkerflex1 .middle1 {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    /*  værksted   */
+    .middle {
+        width: 95%
+    }
+
+    /*   om mig   */
+    .ninnacv {
+        float: right;
+        margin-right: 5%;
+        width: 40%;
+        height: auto;
+    }
+
+    #ommig {
+        display: block;
+        margin: auto;
+        width: 80%;
+    }
+
+    .omtekst {
+        width: 100%;
+    }
+
+    .omknap {
+        width: 80%;
+        padding: 20px;
+        display: block;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    #ommigninna {
+        width: 50%;
+    }
+
+    /*  CV  */
+    .poof {
+        display: none;
+    }
+
+    /*    andre steder du kan finde   */
+    .poof2 {
+        display: block;
+    }
+
+    .andreimg {
+        margin-right: 5%;
+    }
+
+    /*    nyt   */
+    #nyhedstextbox {
+        left: 30%;
+        width: 40%;
+        height: auto;
+        top: 50px;
+    }
+
+    #nyhedstextbox h3 {
+        margin: auto;
+        font-size: 20px;
+    }
+
+    .nyestearticle {
+        width: 50%;
+        flex: none;
+    }
+
+    #nyestebox {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    .nyesteimg {
+        height: auto;
+        width: 100%;
+    }
+
+    /*    Kontakt   */
+    .kontaktflex {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .kontaktinfo p {
+        text-align: center;
+    }
+
+    .kontaktinfo h1 {
+        text-align: center;
+    }
+
+    .kontaktinfo h2 {
+        text-align: center;
+    }
+
+    .mapsflex {
+        width: 100%;
+    }
+
+    #map {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .kontaktinfo {
+        margin-bottom: 40px;
+    }
+
+
+    /*    Krus og Kopper   */
+    #produktbox {
+        flex-wrap: wrap;
+    }
+
+    #produktitem1 {
+        width: 50%;
+        flex: none;
+    }
+    
+    .panel h2 {
+       padding: 10px;
+    }
+    
+    .panel p {
+        font-size: 16px;
+    }
+
+    /*    Teknik og materiale */
+    .materialer {
+        float: none;
+        display: block;
+        margin: auto;
+        width: 20%;
+
+    }
+
+
+    /*    Udstilling på galleri pagter  */
+    #pagterimg {
+        width: 50%;
+    }
+
+    .pagter {
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+    .pagter img {
+        width: 40%;
+    }
+
+}
+
+/* For Mobile */
+
+@media only screen and (max-width: 768px) {
+
+    html p {
+        font-size: 12px;
+    }
+
+    .overskrift {
+        font-size: 40px;
+        letter-spacing: 4px;
+    }
+
+    /* Kontakt    */
+    .kontaktflex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kontaktinfo p {
+        text-align: center;
+    }
+
+    .kontaktinfo h1 {
+        text-align: center;
+    }
+
+    .kontaktinfo h2 {
+        text-align: center;
+    }
+
+    .mapsflex {
+        width: 100%;
+    }
+
+    #map {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+
+    /*    Menubar   */
+    #nav a {
+        width: 40px;
+        height: 40px;
+        font-size: 50%;
+    }
+
+    #nav {
+        font-size: 50%;
+    }
+
+    /* first level */
+    #nav > ul {
+        height: auto;
+        display: none;
+        position: absolute;
+        right: 0;
+        padding: 0;
+        top: 37px;
+        width: 200px;
+
+    }
+
+    #nav > ul > li > a {
+        font-size: 12px;
+    }
+
+    #nav > ul > li:not( :last-child) > a {
+        width: 200px;
+    }
+
+
+    /*    second level */
+    #nav li ul a {
+        font-size: 12px;
+        padding: 10px;
+        border: none;
+        width: 200px;
+
+    }
+
+    #nav ul li {
+        width: 200px;
+    }
+
+    #tilmeldmenu {
+        width: 200px;
+    }
+
+    #nav li:hover ul {
+        width: 200px;
+        border: none;
+    }
+
+    #nav li ul li a:hover {
+        width: 200px;
+
+    }
+
+    #nav li ul li a {
+
+        padding-left: 5px;
+
+    }
+
+    #nav li ul a: hover {
+        width: 200px;
+    }
+
+    #tilmeldmenu {
+        font-size: 12px !important;
+        width: 200px !important;
+    }
+    
+    #tilmeldmenu p {
+        font-size: 12px !important;
+    }
+
+
+    /*    forside*/
+    .grid1 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 7;
+    }
+
+    .grid2 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 8;
+        grid-row-end: 10;
+    }
+
+    .grid3 {
+        grid-column-start: 4;
+        grid-column-end: 13;
+        grid-row-start: 5;
+        grid-row-end: 10;
+    }
+
+    .grid4 {
+        grid-column-start: 1;
+        grid-column-end: 13;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+
+    #scroll {
+        display: none;
+    }
+
+    /*    Gavekort */
+    .gktekst {
+        width: 80%;
+    }
+
+    .kobgk {
+        border: thin solid dimgrey;
+    }
+
+
+
+    /*    Priser   */
+    .poof {
+        display: none;
+
+    }
+    
+    .artikeltekst {
+        margin: auto;
+        width: 80%;
+    }
+
+    
+/*    Galleri */
+    
+    .galtekst {
+        width: 70%;
+        margin-left: 10%;
+        margin-right: 0px;
+    }
+    /*    Værker, Værksted og process, Billedearkiv   */
+    .vaerker {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        margin: auto;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .vaerkerflex .vaerkerimage {
+        opacity: 0.;
+        cursor: pointer;
+    }
+
+    .vaerkerflex .middle {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .onethird {
+        width: 100%;
+    }
+
+    .vaerkerflex {
+        width: 90%;
+    }
+
+
+    /*   Om mig   */
+    .ninnacv {
+        float: none;
+        display: block;
+        margin: auto;
+        width: 80%;
+        height: auto;
+    }
+
+    #ommig {
+        display: block;
+        margin: auto;
+        width: 80%;
+    }
+
+    .omtekst {
+        width: 100%;
+    }
+
+    .omknap {
+        width: 80%;
+        padding: 20px;
+        display: block;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    #ommigninna {
+        width: 100%;
+    }
+
+    /*    CV   */
+    #CV {
+        display: block;
+        margin: auto;
+        width: 80%;
+    }
+
+    /*    Kunsthåndværker   */
+    .howimg {
+        width: 100%;
+        padding: 0;
+    }
+
+    /*    andre steder du kan finde    */
+    .poof2 {
+        display: none;
+    }
+
+
+    /*    Nye værker   */
+    #nyestebox {
+        flex-direction: column;
+    }
+
+    .nyestearticle {
+        width: 100%;
+    }
+
+    .nyesteimg {
+        height: auto;
+    }
+
+    /*    Tilmeld nyhedsbrev   */
+    #tilmelditem2 img {
+        display: none;
+    }
+
+    #tilmeldbox {
+        width: 80%;
+        padding: 0;
+        align-content: center;
+        flex-direction: column;
+    }
+
+    #tilmelditem1 {
+        width: 100%;
+        padding: 0;
+        display: block;
+        margin: auto;
+    }
+
+    .brevknap {
+        width: 80%;
+        padding: 20px;
+    }
+
+    #knapnyhed {
+        display: block;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    #sendbutton {
+        width: 30%;
+        padding: 10px;
+    }
+
+    #emailbox {
+        width: 100%;
+    }
+
+    /*    Nyt   */
+    
+    #nyhedspic {
+        height: 200px;
+    }
+    #nyhedstextbox {
+        left: 20%;
+        width: 60%;
+        height: auto;
+        top: 25%;
+    }
+
+    #nyhedstextbox h3 {
+        margin: auto;
+        font-size: 20px;
+    }
+
+
+    /*    Galleri    */
+    div.scrollgal img {
+        width: 100%;
+    }
+
+    div.scrollgal {
+
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-content: center;
+    }
+
+    div.scrollgal a {
+        width: 80%;
+        height: auto;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .galimage {
+        opacity: 3;
+        cursor: pointer;
+    }
+
+    .middle {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .h2gal {
+        font-size: 25px;
+    }
+
+    .removebr {
+        display: none;
+    }
+
+
+    /*    Krus og Kopper   */
+    #produktbox {
+        flex-direction: column;
+    }
+
+    #produktitem1 {
+        margin: auto;
+        width: 100%;
+    }
+
+    /*    Teknik og materiale   */
+    .materialer {
+        float: none;
+        display: block;
+        margin: auto;
+        width: 50%;
+
+    }
+
+    /*    Udstilling på galleri pagter  */
+    #pagterimg {
+        width: 100%;
+    }
+
+    .pagter {
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+    .pagter img {
+        width: 100%;
+    }
+
+    /*    Bord til to   */
+    #bordtilto {
+        width: 100%;
+    }
+    
+    #aabningstiderfooter, #kontaktfooter {
+        display: none;
+    }
+    
+    #linksfooter p {
+        display: none;
+    }
+    
+    #cvr {
+        display: none;
+    }
+    
+    #footerlogo {
+        display: none;
+    }
+    
+    footer br {
+        display: none;
+    }
+    
+    #somefooter {
+        align-items: center;
+    }
+
+}
