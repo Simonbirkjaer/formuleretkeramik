@@ -1667,11 +1667,10 @@ footer p {
     }
     
     .fflextekst {
-     font-size: 16px;
-        width: 30%;
-        padding: 20px 30px 20px 30px;
-        top: 42%;
-        left: 35%;
+     font-size: 80%;
+        width: 50%;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 
     /* Kontakt    */
